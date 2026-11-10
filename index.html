@@ -1,23 +1,60 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Worldpath</title>
-    <meta name="description" content="Worldpath travel map app information, support, and privacy policy.">
-    <style>
-      :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
-      body { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem; line-height: 1.6; }
-      a { color: #087f72; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>Worldpath</h1>
-      <p>Your trips. Your memories. Your world map.</p>
-      <p>Deine Reisen. Deine Erinnerungen. Deine Weltkarte.</p>
-      <p>Support: <a href="mailto:movi.apps.dev@gmail.com">movi.apps.dev@gmail.com</a></p>
-      <p><a href="privacy/">Privacy policy / Datenschutzerklärung</a></p>
-    </main>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Worldpath — Your travels. Your world map.</title>
+  <meta name="description" content="Track countries and cities, keep past and planned trips together, and watch your world grow with Worldpath. Works offline. No account needed.">
+  <meta name="theme-color" content="#f6f8f2">
+  <meta property="og:title" content="Worldpath">
+  <meta property="og:description" content="Track countries and cities, keep past and planned trips together, and watch your world grow with Worldpath. Works offline. No account needed.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mschudt.github.io/worldpath-website/assets/app-icon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/worldpath-symbol.svg">
+  <link rel="alternate" hreflang="en" href="https://mschudt.github.io/worldpath-website/">
+  <link rel="alternate" hreflang="de" href="https://mschudt.github.io/worldpath-website/de/">
+  <link rel="canonical" href="https://mschudt.github.io/worldpath-website/">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header wrap">
+    <a class="brand" href="./" aria-label="Worldpath"><img src="assets/worldpath-symbol.svg" width="36" height="36" alt=""><span>Worldpath</span></a>
+    <nav aria-label="Main navigation">
+      <a class="nav-explore" href="#explore">Explore the app</a>
+      <a class="nav-privacy" href="privacy/">Privacy</a>
+      <span class="language"><a href="./" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a><span aria-hidden="true">/</span><a href="de/" lang="de" hreflang="de" aria-label="Deutsch">DE</a></span>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">A LITTLE MORE OF THE WORLD</p>
+        <h1 id="hero-title">Your travels.<br>Your memories.<br><em>Your world map.</em></h1>
+        <p class="intro">The places you’ve been. The cities that felt like home. The next trip you can’t stop thinking about. Keep them together with Worldpath.</p>
+        <div class="actions"><a class="button" href="https://play.google.com/store/apps/details?id=de.app.worldpath"><svg width="20" height="22" viewBox="0 0 20 22" aria-hidden="true"><path fill="currentColor" d="M2 1.5 18 11 2 20.5Z"/></svg>Worldpath on Google Play<span aria-hidden="true">↗</span></a></div>
+        <a class="text-link" href="#explore">Take a look inside <span aria-hidden="true">↓</span></a>
+        <ul class="essentials"><li>Works offline</li><li>No account needed</li><li>English & German</li></ul>
+      </div>
+      <figure class="hero-visual">
+        <div class="orbit" aria-hidden="true"></div>
+        <div class="screen"><img src="assets/screenshots/en-US/map.png" width="1080" height="2424" alt="Worldpath’s interactive world map with visited countries, places lived in, and wish-list destinations marked." fetchpriority="high"></div>
+        <figcaption>Actual app screens · example travel data</figcaption>
+      </figure>
+    </section>
+    <section class="colour-story" id="explore" aria-labelledby="colour-title">
+      <div class="wrap colour-inner"><div><p class="eyebrow">WORLDPATH</p><h2 id="colour-title">Every journey leaves a little colour.</h2></div><div><p>Mark countries, cities, and selected territories as visited, lived in, or want to go. Make your map a reflection of your travels.</p><ul class="legend"><li><span class="dot visited" aria-hidden="true">✓</span>Visited</li><li><span class="dot lived" aria-hidden="true">⌂</span>Lived in</li><li><span class="dot want" aria-hidden="true">↗</span>Want to go</li></ul></div></div>
+    </section>
+    <section class="story wrap" aria-labelledby="trip-title">
+      <figure class="story-visual mint"><div class="screen"><img src="assets/screenshots/en-US/trips.png" width="1080" height="2424" alt="The planned trips view in Worldpath, showing example trips to Norway and Canada." loading="lazy"></div></figure>
+      <div class="story-copy"><p class="eyebrow">THE NEXT ADVENTURE, AND THE LAST</p><h2 id="trip-title">Keep your trips<br>together.</h2><p>A weekend away or a journey across countries. Bring your stops, dates, and transport together, with separate places for planned and past trips.</p><p class="detail">Make a plan. Mark it as taken when you return. Watch your map catch up with your memories.</p></div>
+    </section>
+    <section class="story reverse wrap" aria-labelledby="stats-title">
+      <figure class="story-visual lilac"><div class="screen"><img src="assets/screenshots/en-US/statistics.png" width="1080" height="2424" alt="Worldpath statistics with visited country totals, territory progress, and personal travel goals." loading="lazy"></div></figure>
+      <div class="story-copy"><p class="eyebrow">SEE THE BIGGER PICTURE</p><h2 id="stats-title">Watch your<br>world grow.</h2><p>Look back at your travels with country totals, regional progress, and a timeline. Set a personal goal or gather your favourite places into a collection.</p><p class="detail">There’s always another corner of the world to discover.</p></div>
+    </section>
+    <section class="closing wrap" aria-labelledby="close-title"><img src="assets/worldpath-symbol.svg" width="64" height="64" alt=""><p class="eyebrow">READY WHEN YOU ARE</p><h2 id="close-title">Where will your<br>Worldpath take you?</h2><p>Your travel records stay on your device. Explore offline, save a local backup, and pick up where you left off.</p><a class="button" href="https://play.google.com/store/apps/details?id=de.app.worldpath">Worldpath on Google Play <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="footer wrap"><div class="footer-main"><div><a class="brand" href="./"><img src="assets/worldpath-symbol.svg" width="28" height="28" alt=""><span>Worldpath</span></a><p>Made for the places that stay with you.</p></div><div class="footer-links"><a href="privacy/">Privacy</a><a href="mailto:movi.apps.dev@gmail.com">Get in touch</a><a href="https://github.com/mschudt/worldpath-website">GitHub <span aria-hidden="true">↗</span></a></div></div><p class="analytics">Usage analytics is enabled by default and can be switched off in Settings. It can include selected travel content and search terms. See our privacy policy for details.</p><small>© 2026 movi apps</small></footer>
+</body>
 </html>

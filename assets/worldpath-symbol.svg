@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Worldpath">
+  <defs><mask id="journey" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
+    <rect width="200" height="200" fill="#fff"/>
+    <path d="M-12 115 C32 70 49 74 64 120 C85 184 115 191 143 120 C164 67 175 50 210 52" stroke="#000" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M142 149 Q166 171 206 189" stroke="#000" stroke-width="14" stroke-linecap="round" fill="none"/>
+  </mask></defs>
+  <circle cx="100" cy="100" r="96" fill="#147B73" mask="url(#journey)"/>
+</svg>

@@ -1,47 +1,41 @@
-# Worldpath website
+<p align="center">
+  <img src="assets/worldpath-symbol.svg" width="80" alt="Worldpath logo">
+</p>
 
-Public website and bilingual privacy policy for Worldpath.
+<h1 align="center">Worldpath</h1>
 
-## Files
+<p align="center">Your trips. Your memories. Your world map.</p>
 
-- `index.html`: app information and support contact.
-- `privacy/index.html`: English and German privacy policy.
-- `.nojekyll`: serves the site as static HTML without a Jekyll build.
+<p align="center">
+  <a href="https://mschudt.github.io/worldpath-website/">Website</a> ·
+  <a href="https://play.google.com/store/apps/details?id=de.app.worldpath">Google Play</a> ·
+  <a href="https://mschudt.github.io/worldpath-website/privacy/">Privacy policy</a>
+</p>
 
-## Publish
+Worldpath brings your travel history and your next adventures together on a
+personal world map. Mark countries, cities, and selected territories as visited,
+lived in, or want to go; keep planned and past trips in one place; and explore
+your progress with statistics, goals, collections, and a timeline.
 
-From this directory:
+<p align="center">
+  <img src="assets/screenshots/en-US/map.png" width="220" alt="Worldpath world map with example travel data">
+  <img src="assets/screenshots/en-US/trips.png" width="220" alt="Planned trips in Worldpath">
+  <img src="assets/screenshots/en-US/statistics.png" width="220" alt="Worldpath travel statistics">
+</p>
 
-```sh
-git add .
-git commit -m "Publish Worldpath website and privacy policy"
-git push -u origin main
-```
+*Actual app screens with fictional travel data.*
 
-Then open the repository on GitHub and choose **Settings → Pages**:
+- **Ready offline.** Core features work without an internet connection.
+- **Simple to start.** No account or location permission required.
+- **Made for your journeys.** Track places, trip stops, dates, and transport.
+- **Room to look back.** Explore regional progress and save local backups.
+- **English and German.** Available in both languages from the start.
 
-1. Source: **Deploy from a branch**.
-2. Branch: **main**.
-3. Folder: **/ (root)**.
-4. Click **Save** and wait for the Pages deployment to finish.
+Travel records are stored on your device. Usage analytics is enabled by default
+and can be switched off in Settings; it can include selected travel content and
+search terms. See the [privacy policy](https://mschudt.github.io/worldpath-website/privacy/)
+for details.
 
-Expected URLs after deployment:
+This repository is the public home of the Worldpath website and privacy policy.
 
-- Website: https://mschudt.github.io/worldpath-website/
-- Privacy: https://mschudt.github.io/worldpath-website/privacy/
-
-Check both URLs without signing in. Put the privacy URL in Google Play Console
-under App content → Privacy policy, and use the website URL in the store's
-website field. The app currently displays its policy text internally and does
-not hardcode the old Worldpath website URL, so this hosting change alone does
-not require an app rebuild. The old `worldpath-app` URL will not automatically
-redirect to the new site.
-
-For future policy changes, edit `privacy/index.html`, commit, and push to `main`.
-
-## Source
-
-The initial HTML files were copied from `docs/` in the private Worldpath app
-repository. That source directory was retained because the app's release tests
-currently reference it. No app source, signing material, or travel data belongs
-in this public repository.
+Questions or feedback? [movi.apps.dev@gmail.com](mailto:movi.apps.dev@gmail.com)

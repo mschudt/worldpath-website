@@ -10,21 +10,29 @@
         color-scheme: light dark;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
-      body { margin: 0; line-height: 1.65; }
-      main { max-width: 48rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+      body { margin: 0; line-height: 1.65; background: #fff; color: #1f2328; }
+      main { max-width: 48rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; overflow-wrap: anywhere; }
       h1, h2 { line-height: 1.2; }
+      h1 { font-size: clamp(1.5rem, 5vw, 2rem); hyphens: auto; }
       h2 { margin-top: 2rem; }
-      nav { display: flex; gap: 1rem; margin-bottom: 2rem; }
+      nav { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
+      nav a { display: inline-flex; align-items: center; min-height: 44px; }
+      a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
       a { color: #087f72; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #161b22; color: #e6edf3; }
+        a { color: #8ddbd0; }
+      }
       .meta { padding: 1rem; border: 1px solid currentColor; border-radius: .75rem; }
       hr { margin: 4rem 0; border: 0; border-top: 1px solid currentColor; opacity: .2; }
     </style>
   </head>
   <body>
     <main>
-      <nav aria-label="Language">
-        <a href="#english">English</a>
-        <a href="#deutsch">Deutsch</a>
+      <nav aria-label="Navigation">
+        <a href="../" aria-label="Back to Worldpath">← Worldpath</a>
+        <a href="#english" lang="en">English</a>
+        <a href="#deutsch" lang="de">Deutsch</a>
       </nav>
 
       <article id="english" lang="en">
@@ -33,16 +41,16 @@
           <strong>Contact:</strong>
           <a href="mailto:movi.apps.dev@gmail.com">movi.apps.dev@gmail.com</a><br>
           <strong>App identifier:</strong> de.app.worldpath<br>
-          <strong>Last updated:</strong> November 7, 2026</p>
+          <strong>Last updated:</strong> November 9, 2026</p>
 
         <h2>App data</h2>
-        <p>Worldpath stores your country statuses, trips, notes, collections,
-          goals, transport modes, and app preferences only on your device. The
-          store developer cannot access that travel content unless you
-          deliberately include it in an export or support message. The app has
-          no account, cloud travel-data backend, advertising, crash reporting,
-          or cross-device identity and does not request location, contacts,
-          camera, or microphone access.</p>
+        <p>Worldpath stores your country, city, and territory statuses, trips,
+          notes, collections, goals, transport modes, and app preferences
+          locally on your device. When usage analytics is enabled, selected
+          travel content described below is also sent to Firebase/Google
+          Analytics. The app has no account, cloud travel-data backend,
+          advertising, crash reporting, or cross-device identity and does not
+          request location, contacts, camera, or microphone access.</p>
 
         <h2>Optional usage analytics</h2>
         <p>Usage analytics is enabled by default on a fresh installation when
@@ -57,7 +65,8 @@
           random per-run/per-flow identifiers and a per-run sequence. It also
           includes the countries and cities you select, mark, or open (country
           codes and city names, including names of custom cities you create),
-          the countries in trips you save, the regions of your goals, and the
+          territory codes when you change their status, the countries in trips
+          you save, the regions of your goals, and the
           text you type into search fields. Firebase
           also handles app, device, approximate-geography and app-instance
           metadata. The app-instance identifier lets the developer inspect an
@@ -83,8 +92,9 @@
         <h2>Retention and deletion</h2>
         <p>Data remains on your device until you change or delete it, clear the
           app's data, or uninstall Worldpath. You must delete exported files
-          separately from their saved locations. There is no Worldpath account
-          or server-side copy of your travel content.</p>
+          separately from their saved locations. Worldpath has no account or
+          cloud synchronization for your travel records. Previously transmitted
+          analytics data is handled as described below.</p>
         <p>Google Analytics user- and event-level retention is configured for
           14 months. While the raw BigQuery export uses the free sandbox, its
           tables expire after 60 days. To request deletion of previously
@@ -100,7 +110,7 @@
         <h2>Security</h2>
         <p>App data is kept in the operating system's private app storage.
           Exported JSON backups are not encrypted, so store or share them only
-          in places you trust. Opted-in analytics metadata is transmitted to
+          in places you trust. When enabled, analytics metadata is transmitted to
           Firebase using encrypted network connections.</p>
 
         <h2>This website and GitHub Pages</h2>
@@ -131,26 +141,28 @@
           and objection, as well as a right to complain to a data-protection
           authority. Contact
           <a href="mailto:movi.apps.dev@gmail.com">movi.apps.dev@gmail.com</a>.
-          In-app travel data exists only on your device and is controlled by
-          you. This policy will be updated if the data practices change.</p>
+          You control the travel records stored locally in the app. This
+          policy will be updated if the data practices change.</p>
       </article>
 
       <hr>
 
       <article id="deutsch" lang="de">
+        <p><a href="../de/">← Zurück zu Worldpath</a></p>
         <h1>Worldpath Datenschutzerklärung</h1>
         <p class="meta"><strong>Store-Anbietername:</strong> movi apps<br>
           <strong>Kontakt:</strong>
           <a href="mailto:movi.apps.dev@gmail.com">movi.apps.dev@gmail.com</a><br>
           <strong>App-Kennung:</strong> de.app.worldpath<br>
-          <strong>Stand:</strong> 7. November 2026</p>
+          <strong>Stand:</strong> 9. November 2026</p>
 
         <h2>App-Daten</h2>
-        <p>Worldpath speichert deine Länderstatus, Reisen, Notizen, Sammlungen,
-          Ziele, Verkehrsmittel und App-Einstellungen ausschließlich auf deinem
-          Gerät. Der Store-Anbieter kann auf diese Reiseinhalte nicht zugreifen,
-          außer du fügst sie bewusst einem Export oder einer Support-Nachricht
-          bei. Die App hat kein Konto, kein Cloud-Backend für Reisedaten, keine
+        <p>Worldpath speichert deine Markierungen für Länder, Städte und
+          Gebiete, Reisen, Notizen, Sammlungen, Ziele, Verkehrsmittel und
+          App-Einstellungen lokal auf deinem Gerät. Bei aktivierter
+          Nutzungsanalyse werden die unten beschriebenen ausgewählten
+          Reiseinhalte zusätzlich an Firebase/Google Analytics übermittelt.
+          Die App hat kein Konto, kein Cloud-Backend für Reisedaten, keine
           Werbung, Absturzberichterstattung oder geräteübergreifende Identität
           und fordert keinen Zugriff auf Standort, Kontakte, Kamera oder
           Mikrofon an.</p>
@@ -170,7 +182,8 @@
           sowie eine Reihenfolge pro App-Lauf enthalten. Außerdem umfassen sie
           die Länder und Städte, die du auswählst, markierst oder öffnest
           (Ländercodes und Städtenamen, auch Namen selbst angelegter Städte),
-          die Länder in gespeicherten Reisen, die Regionen deiner Ziele und den
+          Gebietscodes bei Statusänderungen, die Länder in gespeicherten
+          Reisen, die Regionen deiner Ziele und den
           Text, den du in Suchfelder eingibst. Firebase verarbeitet
           außerdem App-, Geräte-, ungefähre Standort- und App-Instanz-Metadaten.
           Mit der App-Instanzkennung kann der Entwickler einen geordneten Ablauf
@@ -197,8 +210,10 @@
         <h2>Speicherdauer und Löschung</h2>
         <p>Daten bleiben auf deinem Gerät, bis du sie änderst oder löschst, die
           App-Daten zurücksetzt oder Worldpath deinstallierst. Exportierte
-          Dateien musst du an ihren Speicherorten separat löschen. Es gibt kein
-          Worldpath-Konto und keine serverseitige Kopie deiner Reiseinhalte.</p>
+          Dateien musst du an ihren Speicherorten separat löschen. Worldpath
+          hat kein Konto und keine Cloud-Synchronisierung für deine Reisedaten.
+          Bereits übermittelte Analysedaten werden wie unten beschrieben
+          verarbeitet.</p>
         <p>Die Speicherdauer für Nutzer- und Ereignisdaten in Google Analytics
           ist auf 14 Monate eingestellt. Solange der BigQuery-Rohexport die
           kostenlose Sandbox nutzt, laufen seine Tabellen nach 60 Tagen ab.
@@ -215,9 +230,9 @@
         <h2>Sicherheit</h2>
         <p>App-Daten liegen im privaten App-Speicher des Betriebssystems.
           Exportierte JSON-Sicherungen sind nicht verschlüsselt. Speichere oder
-          teile sie daher nur an vertrauenswürdigen Orten. Freigegebene
-          Analysemetadaten werden über verschlüsselte Netzwerkverbindungen an
-          Firebase übertragen.</p>
+          teile sie daher nur an vertrauenswürdigen Orten. Bei aktivierter
+          Nutzungsanalyse werden Analysedaten über verschlüsselte
+          Netzwerkverbindungen an Firebase übertragen.</p>
 
         <h2>Diese Website und GitHub Pages</h2>
         <p>Diese statische Website nutzt keine Werbung, Analysefunktionen,
@@ -249,8 +264,8 @@
           Datenübertragbarkeit und Widerspruch sowie ein Beschwerderecht bei
           einer Datenschutzaufsichtsbehörde zustehen. Kontakt:
           <a href="mailto:movi.apps.dev@gmail.com">movi.apps.dev@gmail.com</a>.
-          App-Reisedaten liegen nur auf deinem Gerät und werden von dir
-          kontrolliert. Diese Erklärung wird bei Änderungen aktualisiert.</p>
+          Du kontrollierst die lokal in der App gespeicherten Reisedaten.
+          Diese Erklärung wird bei Änderungen aktualisiert.</p>
       </article>
     </main>
   </body>
